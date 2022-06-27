@@ -9,7 +9,7 @@ class Model_laporan extends CI_Model
         INNER JOIN tb_sewa B ON B.id_sewa=A.id_sewa 
         INNER JOIN tb_detail_sewa C ON C.id_sewa=B.id_sewa 
         INNER JOIN tb_mobil D ON D.id_mobil=C.id_mobil
-        WHERE B.status=4 OR B.status=5
+        WHERE B.status=5
         AND A.tanggal_konfirmasi BETWEEN '$tgl1' AND '$tgl2'
         GROUP BY D.nama_mobil");
     }

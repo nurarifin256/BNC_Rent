@@ -16,7 +16,7 @@
                 <div class="form-group row">
                     <label for="staticEmail" class="col-sm-4 col-form-label">Tanggal mulai sewa</label>
                     <div class="col-sm-8">
-                        <input type="date" class="form-control" id="txtDate" onclick="validasiTanggal()" name="tanggal_sewa_mulai" onchange="tanggalsudahada(this)">
+                        <input type="date" class="form-control" id="txtDate" onclick="validasiTanggal()" name="tanggal_sewa_mulai" onchange="tanggalsudahada(this), getTanggal()">
                     </div>
                 </div>
                 <div class="form-group row">

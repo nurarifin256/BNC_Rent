@@ -61,10 +61,13 @@
     function getTanggal() {
         var date = $('#txtDate').val().split('-');
         var date2 = $('#txtDate2').val().split('-');
+
         var day = date[2];
         var day2 = date2[2];
+
+        var month = date[1];
+        var month2 = date2[1];
         var hargaSewa = <?= $mobil['harga_sewa']; ?>
-        // var hasil_sewa;
 
         if (day2 - day == 0) {
             var hasil_sewa = 1
@@ -72,13 +75,12 @@
             var hasil_sewa = day2 - day;
         }
 
+
+
         var lama_sewa = hasil_sewa;
         var total_harga = hasil_sewa * hargaSewa;
 
-        var reverse = total_harga.toString().split('').reverse().join(''),
-            ribuan = reverse.match(/\d{1,3}/g);
-        ribuan = ribuan.join('.').split('').reverse().join('');
-        // console.log(ribuan);
+
 
         $("#lama_sewa").val(hasil_sewa);
         $("#total_harga").val(total_harga);

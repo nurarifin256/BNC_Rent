@@ -43,7 +43,7 @@
                     </tbody>
                     <tr>
                         <td class="text-center" colspan="2">Total</td>
-                        <td colspan="2">Rp. <?= number_format($grand_total) ?></td>
+                        <td colspan="2">Rp. <?= number_format(@$grand_total) ?></td>
                     </tr>
                 </table>
             </div>

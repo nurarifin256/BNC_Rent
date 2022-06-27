@@ -51,6 +51,7 @@
                                     <td>Rp. <?= number_format($k['total_bayar']) ?></td>
                                     <td>
                                         <img class="img-thumbnail" width="150" src="<?= base_url() ?>/assets/img/ktp/<?= $k['gambar_ktp'] ?>">
+
                                     </td>
                                     <td>
                                         <img class="img-thumbnail" width="150" src="<?= base_url() ?>/assets/img/bukti/<?= $k['gambar_bukti_pembayaran'] ?>">
