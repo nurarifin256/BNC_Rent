@@ -24,7 +24,7 @@
                             <th>Nama</th>
                             <th>No Handphone</th>
                             <th>Alamat</th>
-                            <th>Status</th>
+                            <!-- <th>Status</th> -->
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -37,7 +37,7 @@
                                     <td><?= $d['nama_supir'] ?></td>
                                     <td><?= $d['no_handphone'] ?></td>
                                     <td><?= $d['alamat'] ?></td>
-                                    <td>Free</td>
+                                    <!-- <td>Free</td> -->
                                     <td>
                                         <a href="#" onclick="hapusDriver('<?= $d['id_supir'] ?>')"><i class="fas fa-backspace mr-1"></i>Hapus</a> |
                                         <a href="<?= base_url() ?>Driver/ubah/<?= $d['id_supir'] ?>"><i class="fas fa-edit mr-1"></i>Ubah</a>
