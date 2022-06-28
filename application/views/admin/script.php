@@ -23,4 +23,23 @@
             data: $("#detail_booking").serialize() + "&id_supir=" + id_supir + "&id_detail_sewa=" + id_detail_sewa,
         })
     }
+
+    $(document).ready(function() {
+
+        $(".gambar_ktp").on('click', function() {
+            const gambar = $(this).data('gambar');
+
+            $('#foto').attr("src", "<?= base_url('assets/img/ktp/') ?>" + gambar);
+            $('#modal_ktp').modal('show');
+        });
+
+        $(".gambar_bukti").on('click', function() {
+            const bukti = $(this).data('bukti');
+
+            $('#bukti').attr("src", "<?= base_url('assets/img/bukti/') ?>" + bukti);
+            $('#modal_bukti').modal('show');
+        });
+
+
+    })
 </script>

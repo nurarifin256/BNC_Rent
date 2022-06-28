@@ -44,17 +44,21 @@
                         ?>
                                 <tr>
                                     <td><?= $k['id_sewa'] ?></td>
-                                    <td><?= $k['username'] ?></td>
+                                    <td><?= $k['id_user'] ?></td>
                                     <td><?= $k['nama_bank'] ?></td>
                                     <td><?= $k['nama_pemilik_rekening'] ?></td>
                                     <td><?= $k['no_rekening'] ?></td>
                                     <td>Rp. <?= number_format($k['total_bayar']) ?></td>
                                     <td>
-                                        <img class="img-thumbnail" width="150" src="<?= base_url() ?>/assets/img/ktp/<?= $k['gambar_ktp'] ?>">
+                                        <a href="#" class="gambar_ktp" data-toggle="modal" data-gambar="<?= $k['gambar_ktp'] ?>">
+                                            <img class="img-thumbnail" width="150" src="<?= base_url() ?>/assets/img/ktp/<?= $k['gambar_ktp'] ?>">
+                                        </a>
 
                                     </td>
                                     <td>
-                                        <img class="img-thumbnail" width="150" src="<?= base_url() ?>/assets/img/bukti/<?= $k['gambar_bukti_pembayaran'] ?>">
+                                        <a href="" class="gambar_bukti" data-toggle="modal" data-bukti="<?= $k['gambar_bukti_pembayaran'] ?>">
+                                            <img class="img-thumbnail" width="150" src="<?= base_url() ?>/assets/img/bukti/<?= $k['gambar_bukti_pembayaran'] ?>">
+                                        </a>
                                     </td>
                                     <td><?= $ktatus ?></td>
                                     <td>
@@ -77,3 +81,37 @@
 
 </div>
 <!-- End of Main Content -->
+
+<div class="modal fade" id="modal_ktp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel">Gambar Ktp</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <img class="img-thumbnail" width="500" id="foto" src="">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_bukti" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel">Gambar Bukti Pembayaran</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <img class="img-thumbnail" width="500" id="bukti" src="">
+            </div>
+
+        </div>
+    </div>
+</div>
