@@ -3,7 +3,8 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-2 text-gray-800 mt-3">Detail Bookingan</h1>
 
-    <a href="<?= base_url() ?>Admin/index" class="btn btn-success btn-sm mb-3">Kembali</a>
+
+    <!-- <a href="<//?= base_url() ?>Admin/index" class="btn btn-success btn-sm mb-3">Kembali</a> -->
 
     <!-- DataTales Example -->
     <form id="detail_booking" method="POST">

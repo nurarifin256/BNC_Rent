@@ -24,22 +24,34 @@
         })
     }
 
-    $(document).ready(function() {
+    function zoomKtp(gambar) {
 
-        $(".gambar_ktp").on('click', function() {
-            const gambar = $(this).data('gambar');
+        $('#foto').attr("src", "<?= base_url('assets/img/ktp/') ?>" + gambar);
+        $('#modal_ktp').modal('show');
+    }
 
-            $('#foto').attr("src", "<?= base_url('assets/img/ktp/') ?>" + gambar);
-            $('#modal_ktp').modal('show');
-        });
+    function zoomBukti(bukti) {
 
-        $(".gambar_bukti").on('click', function() {
-            const bukti = $(this).data('bukti');
+        $('#bukti').attr("src", "<?= base_url('assets/img/bukti/') ?>" + bukti);
+        $('#modal_bukti').modal('show');
+    }
 
-            $('#bukti').attr("src", "<?= base_url('assets/img/bukti/') ?>" + bukti);
-            $('#modal_bukti').modal('show');
-        });
+    // $(document).ready(function() {
+
+    //     $(".gambar_ktp").on('click', function() {
+    //         const gambar = $(this).data('gambar');
+
+    //         $('#foto').attr("src", "<//?= base_url('assets/img/ktp/') ?>" + gambar);
+    //         $('#modal_ktp').modal('show');
+    //     });
+
+    //     $(".gambar_bukti").on('click', function() {
+    //         const bukti = $(this).data('bukti');
+
+    //         $('#bukti').attr("src", "<//?= base_url('assets/img/bukti/') ?>" + bukti);
+    //         $('#modal_bukti').modal('show');
+    //     });
 
 
-    })
+    // })
 </script>

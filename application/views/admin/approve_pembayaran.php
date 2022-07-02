@@ -50,14 +50,14 @@
                                     <td><?= $k['no_rekening'] ?></td>
                                     <td>Rp. <?= number_format($k['total_bayar']) ?></td>
                                     <td>
-                                        <a href="#" class="gambar_ktp" data-toggle="modal" data-gambar="<?= $k['gambar_ktp'] ?>">
+                                        <a href="#" onclick="zoomKtp('<?= $k['gambar_ktp'] ?>')" class="gambar_ktp" data-toggle="modal">
                                             <img class="img-thumbnail" width="150" src="<?= base_url() ?>/assets/img/ktp/<?= $k['gambar_ktp'] ?>">
                                         </a>
 
                                     </td>
                                     <td>
-                                        <a href="" class="gambar_bukti" data-toggle="modal" data-bukti="<?= $k['gambar_bukti_pembayaran'] ?>">
-                                            <img class="img-thumbnail" width="150" src="<?= base_url() ?>/assets/img/bukti/<?= $k['gambar_bukti_pembayaran'] ?>">
+                                        <a href="" class="gambar_bukti" data-toggle="modal" onclick="zoomBukti('<?= $k['gambar_bukti_pembayaran'] ?>')">
+                                            <img class=" img-thumbnail" width="150" src="<?= base_url() ?>/assets/img/bukti/<?= $k['gambar_bukti_pembayaran'] ?>">
                                         </a>
                                     </td>
                                     <td><?= $ktatus ?></td>

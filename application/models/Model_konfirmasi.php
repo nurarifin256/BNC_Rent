@@ -17,6 +17,7 @@ class Model_konfirmasi extends CI_Model
         $this->db->where('tb_sewa.status', 4);
         $this->db->or_where('tb_sewa.status', 5);
         $this->db->or_where('tb_sewa.status', 6);
+        $this->db->order_by('tb_sewa.id_sewa', 'DESC');
         $query = $this->db->get();
 
         return $query;
