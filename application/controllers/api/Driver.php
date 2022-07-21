@@ -13,6 +13,7 @@ class Driver extends RestController
         parent::__construct();
     }
 
+
     public function index_get($id = 0)
     {
         $check_data = $this->Model_driver->get_data_supir_byId($id)->row_array();
@@ -55,9 +56,9 @@ class Driver extends RestController
         // }
     }
 
-    public function index_put()
+    public function index_put($id_supir)
     {
-        $id_supir = $this->put('id_supir');
+        // $id_supir = $this->put('id_supir');
         $data = [
             'nama_supir' => $this->put('nama_supir'),
             'no_handphone' => $this->put('no_handphone'),
@@ -70,6 +71,21 @@ class Driver extends RestController
         if ($check_data) {
             $this->Model_driver->Ubah_data_supir($id_supir, $data);
             $this->response($data, RestController::HTTP_OK);
+        } else {
+            $this->response([
+                'status' => false,
+                'message' => 'data tidak di temukan'
+            ], 404);
+        }
+    }
+
+    public function index_delete($id_supir)
+    {
+        $check_data = $this->Model_driver->get_data_supir_byId($id_supir)->row_array();
+
+        if ($check_data) {
+            $this->Model_driver->hapus_driver($id_supir);
+            $this->response(RestController::HTTP_OK);
         } else {
             $this->response([
                 'status' => false,
